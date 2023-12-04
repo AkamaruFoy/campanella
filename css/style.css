@@ -1,0 +1,555 @@
+@font-face {
+    font-family: "ぽぷらむ";
+    src: url(PopRumCute.otf);
+}
+
+@font-face {
+    font-family: "わくわく";
+    src: url(mini-wakuwaku-maru.otf);
+}
+
+header {
+    background-color: #DBEDFF;
+    width: 100%;
+    max-height: 161px;
+}
+
+a {
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: block;
+    height: 60px;
+    margin-left: auto;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger.-active .hamburger__line {
+    background-color: transparent;
+}
+
+.hamburger.-active .hamburger__line::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger.-active .hamburger__line::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.hamburger.-active .hamburger__text::before {
+    content: 'とじる';
+}
+
+.hamburger__line {
+    display: block;
+    height: 8px;
+    border-radius: 10px;
+    position: fixed;
+    transform: translateX(-50%);
+    width: 45px;
+    background-color: #ffffe8;
+    transition: 0.4s;
+}
+
+.hamburger__line:before,
+.hamburger__line:after {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #ffa4d2;
+    transition: inherit;
+}
+
+.hamburger__line:before {
+    top: -15px;
+}
+
+.hamburger__line:after {
+    top: 15px;
+}
+
+.hamburger__text {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/* .hamburger__text::before {
+    content: "めにゅー";
+    text-align: center;
+    color: #ffffe8;
+    font-size: 15px;
+    font-weight: 900;
+    font-family: "わくわく";
+    position: fixed;
+    top: 10px;
+    right: px;
+} */
+
+.header {
+    width: 300px;
+}
+
+.header__nav-area {
+    position: fixed;
+    top: 156px;
+    right: 0%;
+    z-index: 9;
+    height: 65vh;
+    border-radius: 15px;
+    width: 300px;
+    visibility: hidden;
+    padding-top: 60px;
+    background-color: #fff;
+    opacity: 90%;
+    transition: 0.4s;
+}
+
+.header__nav-area.-active {
+    visibility: visible;
+}
+
+.global-navigation {
+    padding-top: 40px;
+    padding-right: 25px;
+    padding-bottom: 120px;
+    padding-left: 25px;
+}
+
+.global-navigation__list>li {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e7e9ee;
+}
+
+.global-navigation__list>li+li {
+    margin-top: 20px;
+}
+
+.global-navigation__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #172e59;
+    font-weight: 900;
+    transition: color 0.4s;
+    font-size: 0.875rem;
+}
+
+.global-navigation__link.-accordion {
+    position: relative;
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 0;
+}
+
+.global-navigation__link.-accordion::after {
+    content: '';
+    display: block;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 2px;
+    background-color: #172e59;
+    transform: translateY(-50%);
+    transition: transform 0.4s;
+}
+
+.global-navigation__link.-accordion::before {
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 12px;
+    background-color: #172e59;
+    transform: translateY(-50%);
+
+}
+
+.global-navigation__link.-active::after {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.accordion {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.accordion.-active {
+    height: auto;
+    padding-top: 30px;
+    visibility: visible;
+}
+
+.accordion__list li {
+    font-size: 0.75rem;
+}
+
+.accordion__list li+li {
+    margin-top: 21px;
+}
+
+.accordion__link {
+    color: #172e59;
+}
+
+#logo {
+    max-width: 270px;
+    min-height: 30px;
+    margin: 0 auto;
+}
+
+#logo img {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+}
+
+#shop {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#shop img {
+    width: 100%;
+    height: auto;
+
+}
+
+main {
+    max-width: 1920px;
+    height: auto;
+}
+
+body {
+    background: url(../pdf/bg_web.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.swiper-area {
+    margin-top: -3rem;
+
+}
+
+.swiper {
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.swiper-slide img {
+    height: auto;
+    width: 860px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    height: 50px;
+    width: 50px;
+}
+
+.swiper-button-prev::after {
+    background-image: url(../pdf/アセット\ 14.png);
+    position: absolute;
+    top: 900000px;
+}
+
+.swiper-button-next::after {
+    background-image: url(../pdf/アセット\ 13.png);
+
+}
+
+.swiper-slide img {
+    height: auto;
+    width: 100%;
+}
+
+
+
+h1 {
+    font-family: "ぽぷらむ";
+    font-size: 27px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 35px;
+}
+
+h2 {
+    font-family: "わくわく";
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+h3 {
+    font-family: "わくわく";
+    font-size: 15px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 35px;
+}
+
+p {
+    font-family: "ぽぷらむ";
+    font-size: 15px;
+    text-align: center;
+}
+
+.global-navigation__link{
+    color: #ffa4d2;
+}
+
+.global-navigation__list a{
+    font-family: "わくわく";
+    display: flex;
+    justify-content: center;
+    color: rgba(137, 186, 235, 0.932);
+}
+
+#sec02 {
+    padding-top: 275px;
+}
+
+#profile {
+    background-color: #FFFFF9;
+    border: 16px solid #FFDDEE;
+    border-radius: 120px;
+    max-width: 942px;
+    min-width: 320px;
+    height: 1028px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.icon {
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+    padding-top: 100px;
+}
+
+.char {
+    display: flex;
+    padding-bottom: 40px;
+    gap: 40px;
+}
+
+.char2 {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 40px;
+    gap: 40px;
+}
+
+.text {
+    background-color: #FFFFF9;
+    border: 5px solid #FFDDEE;
+    border-radius: 40px;
+    max-width: 407px;
+    height: 200px;
+    padding: 0 30px;
+    gap: 1rem;
+}
+
+#sec03 {
+    padding-top: 275px;
+}
+
+.menu {
+    max-width: calc(566px / 1920px * 90%);
+    display: flex;
+    justify-content: center;
+}
+
+#sec04 {
+    padding-top: 275px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.sns2 {
+    background-color: #DBEDFF;
+    border: 16px solid #FFD2FC;
+    border-radius: 25px;
+    margin: 0 auto;
+    width: 400px;
+    height: 430px;
+}
+
+.tiktok-embed.twitter-tweet {
+    display: flex;
+    justify-content: center;
+}
+
+#sec05 {
+    padding-top: 275px;
+    padding-bottom: 311px;
+}
+
+.acsess {
+    width: 997px;
+    height: 541px;
+    background-color: #FFFFF9;
+    border: 6px solid #FFDDEE;
+    border-radius: 20px;
+    display: flex;
+    margin: 0 auto;
+}
+
+#map {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.addess {
+    display: flex;
+    align-items: end;
+    padding-bottom: 52px;
+}
+
+body .tiktok-embed {
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    max-height: 180px;
+    min-height: 48px;
+    background-color: #FFD2FC;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+@media (max-width: 900px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 80%;
+    }
+
+    #shop img {
+        object-fit: contain;
+    }
+
+    .swiper {
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+    }
+
+    #profile{
+        width: 80%;
+        height: auto;
+        border-radius: 50px;
+        border: 10px solid #FFDDEE;
+    }
+
+    .char,
+    .char2 {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #sec04 {
+        flex-direction: column;
+    }
+
+    .char.char2 {
+        flex-direction: column;
+    }
+
+    .text {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+
+    .menu {
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .menu img {
+        width: 100%;
+    }
+
+    .acsess {
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+    }
+
+    .hamburger__line{
+    display: block;
+    height: 8px;
+    border-radius: 8px;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    transform: translateX(-50%);
+    width: 40px;
+    background-color: #ffffe8;
+    transition: 0.4s;
+    }
+
+    .hamburger__line:before {
+        top: -13px;
+    }
+    
+    .hamburger__line:after {
+        top: 13px;
+    }
+
+    /* .hamburger__text::before {
+        content: "めにゅー";
+        text-align: center;
+        color: #ffffe8;
+        font-size: 14px;
+        font-weight: 900;
+        font-family: "わくわく";
+        position: absolute;
+        top: -128px;
+        left: -45%; */
+    }
